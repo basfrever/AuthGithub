@@ -1,0 +1,11 @@
+<div ng-hide="userData">
+    <h2 ng-bind="message"></h2>
+    <a href="/auth/github">Login with GitHub</a>
+</div>
+<div ng-show="userData">
+    <a href="/logout">logout</a>
+
+	<p>UserName: <span ng-bind="userData.username"></span></p>
+    <p>Provider: <span ng-bind="userData.provider"></span></p>
+</div>    
+
