@@ -96,13 +96,13 @@ app.get('/auth/github/callback',
   function(req, res) {
     res.redirect('/');
   });
-   app.get('/account', function(req, res){
-     if (req.isAuthenticated()) { 
-       res.send({user : req.user}); 
-     }else{
-       res.redirect('/login');
-     }
-   });
+app.get('/account', function(req, res){
+ if (req.isAuthenticated()) { 
+   res.send({user : req.user}); 
+ }else{
+   res.redirect('/login');
+ }
+});
 app.get('/logout', function(req, res){
   req.logout();
   res.redirect('/');

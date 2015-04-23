@@ -4,8 +4,9 @@
 </div>
 <div ng-show="userData">
     <a href="/logout">logout</a>
-
+    <p>Id: <span ng-bind="userData.id"></span></p>
 	<p>UserName: <span ng-bind="userData.username"></span></p>
     <p>Provider: <span ng-bind="userData.provider"></span></p>
+    <p>profileUrl: <span ng-bind="userData.profileUrl"></span></p>
 </div>    
 

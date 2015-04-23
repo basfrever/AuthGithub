@@ -9,10 +9,9 @@ app.config(function($locationProvider, $routeProvider) {
 });
  
 app.controller('ctrl', function($scope,$http){
-    $http.get('/account').
-    success(function(data) {
+    $http.get('/account').success(function(data) {
       $scope.userData = data.user;
     });
-$scope.message='Welcome! Please log in.';
-
+    
+    $scope.message='Welcome! Please log in.';
 });
